@@ -1,10 +1,10 @@
 package com.example.springboot;
 
-import java.util.LinkedList;
+import java.util.List;
 
 public interface Delivery {
 
-    default void deliver(LinkedList items){
+    default void deliver(List items){
 
     }
 

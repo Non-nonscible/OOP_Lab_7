@@ -17,10 +17,14 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 @AutoConfigureMockMvc
 public class HelloControllerTest {
 
-	@Autowired
-	private MockMvc mvc;
-
 	@Test
 	public void getHello() throws Exception {
+		Order order = new Order();
+		order.addItem(new CactusFlower());
+		order.addItem(new RomashkaFlower());
+		order.setDeliveryStrategy(new DHLDeliveryStrategy());
+		order.setPaymentStrategy(new CreditPaymentStrategy());
+
+		assert order.calculateTotalPrice() == 35;
 	}
 }

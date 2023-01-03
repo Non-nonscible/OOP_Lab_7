@@ -13,7 +13,6 @@ public class FlowerController {
 	public StringBuilder index() {
 		CactusFlower cactus = new CactusFlower();
 		RomashkaFlower romashka = new RomashkaFlower();
-
 		ArrayList<Item> res = new ArrayList<Item>();
 		res.add(cactus);
 		res.add(romashka);
@@ -21,11 +20,10 @@ public class FlowerController {
 		StringBuilder temp = new StringBuilder();
 
 		for (Item item: res) {
-			temp.append(item.getDescription());
-			temp.append("\n");
+			temp.append(item.getDescription()).append(" ");
 		}
-
 		return temp;
+
 	}
 
 }

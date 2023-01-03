@@ -17,7 +17,6 @@ public class HelloControllerIT {
 
     @Test
     public void getHello() throws Exception {
-        ResponseEntity<String> response = template.getForEntity("/", String.class);
-        assertThat(1+1 == 2);
+
     }
 }
